@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "MaliciousFont";
+  src: url("https://malicious.example.com/malicious-font.woff2");
+}
+
+body {
+  font-family: "MaliciousFont";
+}
