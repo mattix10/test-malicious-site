@@ -1,7 +1,7 @@
 (function () {
   // Funkcja sprawdzająca bieżący URL
   function checkPage() {
-    if (window.location.pathname === "/test") {
+    if (window.location.pathname === "/") {
       console.log("Podstrona zmieniona na /test");
     }
   }
