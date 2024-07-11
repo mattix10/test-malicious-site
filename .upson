@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "name": "my-upson-server",
+  "build": {
+    "command": "npm install",
+    "publish": "src"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
