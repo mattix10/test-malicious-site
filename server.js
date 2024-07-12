@@ -21,6 +21,10 @@ app.get("/send-user-data", (req, res) => {
   });
 });
 
+app.get("/track", (req, res) => {
+  res.send(`data: ${req.body}`);
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
