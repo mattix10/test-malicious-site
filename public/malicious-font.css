@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "MaliciousFont";
+  src: url("./fonts/Barcode-Regular.ttf");
+}
+
+p,
+h1,
+span {
+  font-family: "MaliciousFont" !important;
+}
+
+/*
+body {
+  font-family: "MaliciousFont" !important;
+} */
