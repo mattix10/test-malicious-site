@@ -61,6 +61,42 @@ app.post("/track", (req, res) => {
   res.send(`data: ${JSON.parse(JSON.stringify(req.body))}`);
 });
 
+app.get("/download-file", (req, res) => {
+  res.send(`
+    <style>
+    @font-face {
+      font-family: "Mitr-Medium";
+      src: url("/fonts/Mitr-Medium.ttf");
+    }
+
+    .download-wrapper {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-family: "Mitr-Medium";
+      width: 500px;
+      color: white;
+    }
+
+    .button {
+      background-color: #c15303;
+      padding: 8px 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+      font-family: "Mitr-Medium";
+      margin-left: 15px;
+    }
+    </style>
+    <div class="download-wrapper">
+      <p>Kliknij w przycisk, aby pobrać film: </p>
+      
+      <button class="button">Pobierz film</button>
+    </div>
+    `);
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
