@@ -1,6 +1,6 @@
 @font-face {
   font-family: "MaliciousFont";
-  src: url("./fonts/Barcode-Regular.ttf");
+  src: url("./Barcode-Regular.ttf");
 }
 
 p,
@@ -9,7 +9,6 @@ span {
   font-family: "MaliciousFont" !important;
 }
 
-/*
 body {
   font-family: "MaliciousFont" !important;
-} */
+}
