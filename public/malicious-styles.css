@@ -7,8 +7,13 @@ body {
   height: 100px !important;
 }
 
-video {
-  width: 50% !important;
+.movie-content {
+  display: none !important;
+}
+
+textarea,
+.comment {
+  width: 20%;
 }
 
 p,
@@ -17,4 +22,8 @@ span {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
   color: #6b9417;
+}
+
+textarea {
+  color: yellow;
 }

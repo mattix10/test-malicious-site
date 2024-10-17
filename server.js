@@ -69,9 +69,9 @@ app.get("/read-user-credentials", (req, res) => {
     }
     const userCredentails = JSON.parse(data);
     res.send(`
-      <div>User credentials: 
-      <p>password: ${userCredentails.password}</p>
-      <p>email: ${userCredentails.email}</p>
+      <div>Dane uwierzytelniające użytkownika: 
+      <p>hasło: P4ssword$</p>
+      <p>email: testuser@test.com</p>
       </div>`);
   });
 });
@@ -193,7 +193,7 @@ app.get("/clickjacking", (req, res) => {
     </style>
 
     <a href="/malicious-file.exe" download="malicious-file.exe" id="a" ></a>
-    <iframe style="width: 100%; height:100%" src="https:localhost:5001" />
+    <iframe style="width: 100%; height:100%" src="https:127.0.0.1:5001" />
     
     <script>
       const iframe = document.getElementByTagName('iframe');
